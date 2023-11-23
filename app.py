@@ -27,9 +27,7 @@ def main():
     st.markdown("1. Split an image into a grid of sub-image patches")  
     st.markdown("2. Embed each patch with a linear projection")  
     st.markdown("3. Each embedded patch becomes a token, and the resulting sequence of embedded patches is the sequence you pass to the model.")  
-    vit=Image.open("vit-figure.jpg")
-    st.image(vit)
-
+    
     st.header("Try it out!")
 
     uploaded_file = st.file_uploader("Upload Files",type=['png','jpeg','jpg'])
