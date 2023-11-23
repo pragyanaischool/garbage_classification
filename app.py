@@ -5,13 +5,9 @@ from transformers import pipeline
 import numpy as np
 from transformers import AutoFeatureExtractor, AutoModelForImageClassification
 
-
 st.set_page_config(layout='wide',
                    page_title='Garbage image classification'
                    )
-
-
-
 
 def main():
     
@@ -31,26 +27,8 @@ def main():
     st.markdown("1. Split an image into a grid of sub-image patches")  
     st.markdown("2. Embed each patch with a linear projection")  
     st.markdown("3. Each embedded patch becomes a token, and the resulting sequence of embedded patches is the sequence you pass to the model.")  
-    vit=Image.open("pic/vit-figure.jpg")
+    vit=Image.open("vit-figure.jpg")
     st.image(vit)
-
-    st.markdown("I trained the model with 10 epochs, and I use Adam as the optimizer. The accuracy on the test set is 95%.")  
-    st.markdown("## Huggingface Space")  
-    st.markdown("The page here.")  
-    st.markdown("## Huggingface Model Card")  
-    st.markdown("Huggingface model card is [here](https://huggingface.co/yangy50/garbage-classification).")  
-    st.markdown("## Critical Analysis")  
-    st.markdown("1. Next step: build a CNN model on this dataset and compare the accuracy and training time for these two models.")  
-    st.markdown("2. Didn’t use the Dataset package to store the image data. Want to find out how to use the Dataset package to handle image data.")  
-    st.markdown("## Resource Links")  
-    st.markdown("[vit-base-patch16-224-in21k](https://huggingface.co/google/vit-base-patch16-224-in21k)")  
-    st.markdown("[Garbage dataset](https://huggingface.co/cardiffnlp/twitter-roberta-base)")  
-    st.markdown("[An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale](https://arxiv.org/abs/2010.11929)")  
-    st.markdown("## Git Repo")  
-    st.markdown("[Code Demo](https://github.com/yuechen-yang/garbage-classification) ")  
-    st.markdown("## Video Recording")  
-    st.markdown("[Video](https://drive.google.com/file/d/1Kazf1WdYyf8fTNSfipGddPWu1x0skrw5/view?usp=sharing)")
-
 
     st.header("Try it out!")
 
@@ -84,7 +62,6 @@ def main():
             st.write("trash")
 
         st.image(img)
-
 
 
 if __name__ == '__main__':
